@@ -3,10 +3,10 @@ pipeline {
     stages {
         stage('building master bracnh') {
             when {
-                changeRequest()
+                changeRequest title:"when-pr"
             }
             steps {
-                echo 'building pull request'
+                echo 'building pull request by title'
             }
         }
     }
